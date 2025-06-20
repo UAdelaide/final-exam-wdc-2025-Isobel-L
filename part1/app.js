@@ -22,6 +22,7 @@ async function initDB(){
 
 // sample code
 
+INSERT IGNORE 
 
 
 
