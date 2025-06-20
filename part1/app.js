@@ -19,7 +19,7 @@ async function initDB(){
 
     console.log('connected to mysql');
     } catch (error) {
-        console.error()
+        console.error('Failed to connect to MySQL:', error);
     }
 
 // route: /api/dogs
