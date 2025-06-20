@@ -61,5 +61,8 @@ app.get('/api/walkers/summary,', async (req, res) => {
             FROM Users u
             LEFT Join Ratings r ON u.id = r.walker_id
             WHERE u.role = 'walker'
-            GROUP BY 
+            GROUP BY u.id;
+            `);
+            res.json(rows);
+            
 
