@@ -18,7 +18,7 @@ async function initDB(){
         });
 
     console.log('connected to mysql');
-    }} catch (error) {
+    } catch (error) {
         return
     }
 
