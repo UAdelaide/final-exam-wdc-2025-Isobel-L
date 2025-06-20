@@ -2,5 +2,15 @@ const express = require('express');
 const mysql = require('mysq;2/promise');
 
 const app = express();
-const port = 8080;
+const PORT = 8080;
+
+let db;
+
+
+
+
+
+
+
+
 
