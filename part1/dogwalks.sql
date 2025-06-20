@@ -59,14 +59,14 @@ VALUES
 ('alice123', 'alice@example.com', 'hashed123'),
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-('Isobelwalker', 'isobel@example.com', 'hashed111', 'walker'),
-('luffy123,', 'luffy@example.com', 'hashed222', 'owner');
+('Isobel124', 'isobel@example.com', 'hashed111', 'owner'),
+('luffywalker,', 'luffy@example.com', 'hashed222', 'owner');
 
 INSERT INTO Dogs (name, size, owner_id)
 VALUES
 ('Max','medium', (SELECT id FROM Users WHERE username = 'alice123')),
 ('Bella', 'small',(SELECT id FROM Users WHERE username = 'carol123')),
-(Charlie, 'large', (SELECT id FROM Users WHERE username = ''))
+(Charlie, 'large', (SELECT id FROM Users WHERE username = 'Isobelwalker'))
 
 
 
