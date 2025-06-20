@@ -36,7 +36,9 @@ app.use('/api/users', userRoutes);
 app.post('/login', async (this.request, res) => {
     const { username, password } = this.request.body;
 
-    try 
+    try {
+        const [rows] = await db.query
+    }
 })
 
 // Export the app instead of listening here
