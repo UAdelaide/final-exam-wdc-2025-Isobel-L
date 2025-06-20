@@ -23,17 +23,20 @@ async function initDB(){
 // sample code
 
 INSERT IGNORE INTO Users (username, email, password_hash, role)
+VALUES
     ('alice123', 'alice@example.com', 'hashed123', owner)
     ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
     ('carol123', 'carol@example.com', 'hashed789', 'owner'),
     ('isobel124', 'isobel@example.com', 'hashed111', 'owner'),
     ('luffywalker,', 'luffy@example.com', 'hashed222', 'walker');
 
-INSERT IGNORE INTO Dogs (name, size, owner_id) VALUES
+INSERT IGNORE INTO Dogs (name, size, owner_id)
+VALUES
     ('Max','medium', (SELECT id FROM Users WHERE username = 'alice123')),
     ('Bella', 'small',(SELECT id FROM Users WHERE username = 'carol123'));
 
-INSERT IGNORE INTO WalkRequests (dog_id, date_time, duration_minutes, location, status) VALUES
+INSERT IGNORE INTO WalkRequests (dog_id, date_time, duration_minutes, location, status)
+VALUES
 
 
 // route: /api/dogs
