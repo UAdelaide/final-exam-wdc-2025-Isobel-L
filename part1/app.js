@@ -17,6 +17,8 @@ async function initDB(){
             database: 'dogwalks'
         });
 
+        
+
 
 
 
