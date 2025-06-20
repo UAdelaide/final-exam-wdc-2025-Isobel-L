@@ -68,15 +68,7 @@ VALUES
 ('Bella', 'small',(SELECT id FROM Users WHERE username = 'carol123')),
 ('Charlie', 'large', (SELECT id FROM Users WHERE username = 'isobel123')),
 ('Daisy', 'medium', (SELECT id FROM Users WHERE username = 'isobel123')),
-('Rocky', 'large', (SELECT id FROM Users WHERE username = 'bobwalker')),
-
-
-
-
-
-
-
-
+('Rocky', 'large', (SELECT id FROM Users WHERE username = 'bobwalker'));
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES
