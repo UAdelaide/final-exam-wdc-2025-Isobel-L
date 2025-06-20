@@ -56,7 +56,7 @@ CREATE TABLE WalkRatings (
 
 INSERT INTO Users (username, email, password_hash, role)
 VALUES
-('alice123', 'alice@example.com', 'hashed123'),
+('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('isobel124', 'isobel@example.com', 'hashed111', 'owner'),
@@ -68,7 +68,7 @@ VALUES
 ('Bella', 'small',(SELECT id FROM Users WHERE username = 'carol123')),
 ('Charlie', 'large', (SELECT id FROM Users WHERE username = 'isobel123')),
 ('Daisy', 'medium', (SELECT id FROM Users WHERE username = 'isobel123')),
-('', 'large', (SELECT id FROM Users WHERE username = 'isobel123')),
+('Rocky', 'large', (SELECT id FROM Users WHERE username = 'bobwalker')),
 
 
 
