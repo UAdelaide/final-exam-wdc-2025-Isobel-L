@@ -55,6 +55,9 @@ app.post('/login', async (this.request, res) => {
         req.session.role = user.role;
 
         res.json({message: 'Login successful :)', role: user.role });
+        catch (error) {
+            console.error('Login error')
+        }
     }
 })
 
