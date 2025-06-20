@@ -10,7 +10,8 @@ let db;
 
 
 
-// route 
+// route: /api/dogs
+app.get
 
 
 
