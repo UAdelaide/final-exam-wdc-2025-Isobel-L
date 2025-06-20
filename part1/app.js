@@ -18,7 +18,9 @@ async function initDB(){
         });
 
     console.log('connected to mysql');
-    }} catc
+    }} catch (error) {
+        
+    }
 
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
