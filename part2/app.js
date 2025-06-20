@@ -36,8 +36,6 @@ app.use('/api/users', userRoutes);
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
-    // document.write("Hi Isobel");
-
     try {
         const [rows] = await db.query(
             'SELECT * FROM Users WHERE username = ?',
