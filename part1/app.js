@@ -30,7 +30,7 @@ app.get('/api/dogs', async (req, res) => {
 // route: /api/walkrequests/open
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
-        const[rows] = await 
+        const[rows] = await db.query 
 
 
 
