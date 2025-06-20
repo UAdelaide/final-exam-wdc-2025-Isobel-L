@@ -33,7 +33,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
         const[rows] = await db.query(`
             SELECT
             WalkRequests.id AS request_id,
-            Dogs.name AS dog_name, 
+            Dogs.name AS dog_name,
+            
 
 
 
