@@ -44,7 +44,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
         WHERE WalkRequests.status = 'open'
         `);
         res.json(rows);
-    } catch (error) {}
+    } catch (error) {
+        res.status(500).json({})
+    }
 
 
 
