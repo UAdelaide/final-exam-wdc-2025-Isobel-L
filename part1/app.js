@@ -13,7 +13,7 @@ let db;
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
     try {
-        const[rows] = await db.query()(`
+        const[rows] = await db.query()(
             SELECT
             Dogs.name AS dog_name,
             Dogs.size,
@@ -25,7 +25,7 @@ app.get('/api/dogs', async (req, res) => {
         } catch (error) {
          res.status(500).json({ error: 'Failed to fetch dogs :(' });
         }
-        }); 
+        });
 
 
 
