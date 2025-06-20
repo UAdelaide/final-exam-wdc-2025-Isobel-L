@@ -56,7 +56,8 @@ app.post('/login', async (this.request, res) => {
 
         res.json({message: 'Login successful :)', role: user.role });
         catch (error) {
-            console.error('Login error')
+            console.error('Login error:', error);
+            res.status(500)
         }
     }
 })
