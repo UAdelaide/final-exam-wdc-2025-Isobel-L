@@ -11,8 +11,9 @@ let db;
 async function initDB(){
     try {
         db = await mysql.createConnection({
-            
-}
+            host: 'localhost',
+            user: 'root'
+
 
 
 
