@@ -61,7 +61,7 @@ app.post('/login', async (this.request, res) => {
         }
 }});
 
-app.post
+app.post('/logout', (req, res) => {})
 
 // Export the app instead of listening here
 module.exports = app;
