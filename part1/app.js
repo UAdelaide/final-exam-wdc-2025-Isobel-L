@@ -81,4 +81,5 @@ app.get('/api/walkers/summary', async (req, res) => {
 initDB().then(() => {
     app.listen(PORT, () =>{
         console.log('sever is running at localhost:${PORT} :)');
-    }
+    });
+});
