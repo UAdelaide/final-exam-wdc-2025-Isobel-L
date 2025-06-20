@@ -59,7 +59,9 @@ app.post('/login', async (this.request, res) => {
             console.error('Login error:', error);
             res.status(500).json({ error: 'Internal server error'});
         }
-});
+}});
+
+app.post
 
 // Export the app instead of listening here
 module.exports = app;
