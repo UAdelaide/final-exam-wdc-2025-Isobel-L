@@ -56,7 +56,6 @@
 
                         const data = await res.json();
 
-                        this.error = 'num two';
                         if (res, ok) {
                             if (data.role === 'owner') {
                                 window.location.href = 'owner-dashboard.html';
@@ -66,7 +65,6 @@
                         } else {
                             this.error = data.error || 'Login failed';
                         }
-                        this.error = 'num three';
                     } catch (err) {
                         // this.error = 'Server error. Please try again';
                     }
