@@ -18,7 +18,10 @@ app.use(session({
 let db;
 
 (async () => {
-    
+    db = await mysql.createConnection({
+        host: 'localhost',
+        
+    })
 }
 
 
