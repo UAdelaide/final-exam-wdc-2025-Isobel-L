@@ -6,11 +6,11 @@ const PORT = 8080;
 
 let db;
 
-//mysql 
+//mysql
 
 async function initDB(){
     try {
-        db = await mysql.createConnection({})
+        db = await mysql.createConnection({}
 }
 
 
