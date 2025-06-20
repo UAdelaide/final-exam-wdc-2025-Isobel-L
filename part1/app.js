@@ -42,7 +42,7 @@ VALUES
 
 INSERT IGNORE INTO WalkApplications (walker_id, walk_request_id)
 VALUES
-
+    ((SELECT id FROM
 
 
 // route: /api/dogs
