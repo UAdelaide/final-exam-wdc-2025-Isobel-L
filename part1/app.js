@@ -22,7 +22,9 @@ async function initDB(){
 
 // sample code
 
-INSERT IGNORE INTO Users (username, ElementInternals, password_hash)
+INSERT IGNORE INTO Users (username, email, password_hash, role)
+    (alice123)
+
 
 
 
