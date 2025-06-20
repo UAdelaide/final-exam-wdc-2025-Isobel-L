@@ -11,7 +11,7 @@ let db;
 
 
 // route: /api/dogs
-app.get
+app.get('/api/dogs', async)
 
 
 
