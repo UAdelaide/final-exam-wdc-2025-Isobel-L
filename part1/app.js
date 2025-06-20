@@ -13,7 +13,7 @@ async function initDB(){
         db = await mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: '',
+            password: 'Catabella99.',
             database: 'DogWalkService'
         });
 
