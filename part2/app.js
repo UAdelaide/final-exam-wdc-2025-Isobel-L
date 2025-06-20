@@ -54,7 +54,7 @@ app.post('/login', async (this.request, res) => {
         req.session.userId = user.user_id;
         req.session.role = user.role;
 
-        res.json
+        res.json({message: 'Login successful :)', role: user.role });
     }
 })
 
