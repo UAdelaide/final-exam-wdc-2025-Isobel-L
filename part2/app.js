@@ -9,7 +9,10 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
-app.use
+app.use(session({
+    secret: 'secret_key',
+    resave
+}))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
