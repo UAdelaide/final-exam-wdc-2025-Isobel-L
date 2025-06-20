@@ -17,7 +17,9 @@ app.use(session({
 
 let db;
 
-(async)
+(async () => {
+    
+}
 
 
 // Routes
