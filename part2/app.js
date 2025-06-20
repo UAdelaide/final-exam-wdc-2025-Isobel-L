@@ -51,7 +51,8 @@ app.post('/login', async (this.request, res) => {
             return res.status(401).json({ error: 'Invalid username or password :('})
         }
 
-        req
+        req.session.userId = user.user_id;
+        req.session
     }
 })
 
