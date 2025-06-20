@@ -30,7 +30,7 @@ INSERT IGNORE INTO Users (username, email, password_hash, role)
     ('luffywalker,', 'luffy@example.com', 'hashed222', 'walker');
 
 INSERT IGNORE INTO Dogs (name, size, owner_id) VALUES
-
+    ()
 
 
 
