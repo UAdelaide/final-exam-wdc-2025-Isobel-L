@@ -22,6 +22,9 @@ app.get('/api/dogs', async (req, res) => {
             Join Users ON Dogs.owner_id = Users.id;
         );
         res.json(rows);
+        } catch (error) {
+
+        }
 
 
 
