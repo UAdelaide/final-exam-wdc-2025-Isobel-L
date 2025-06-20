@@ -8,7 +8,10 @@ let db;
 
 //mysql shit
 
-ays
+async function initDB(){
+    try {
+        
+}
 
 
 
