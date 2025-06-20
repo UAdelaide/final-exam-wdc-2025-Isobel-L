@@ -43,7 +43,8 @@ app.post('/login', async (this.request, res) => {
         );
 
         if (rows.length ===0){
-            return res.status(401).json({})
+            return res.status(401).json({error: "Invalid username or password :("});
+            
         }
     }
 })
