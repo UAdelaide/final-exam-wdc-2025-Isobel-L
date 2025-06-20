@@ -62,7 +62,7 @@ app.post('/login', async (req, res) => {
     //         res.status(500).json({ error: 'Internal server error'});
     //     }
 
-    res.json({ message:})
+    res.json({ message: 'Login' })
     });
 
 app.post('/logout', (req, res) => {
