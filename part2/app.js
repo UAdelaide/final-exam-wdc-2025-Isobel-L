@@ -38,7 +38,8 @@ app.post('/login', async (this.request, res) => {
 
     try {
         const [rows] = await db.query(
-            'SELECT *'
+            'SELECT * FROM Users WHERE username = ?',
+            
         )
     }
 })
