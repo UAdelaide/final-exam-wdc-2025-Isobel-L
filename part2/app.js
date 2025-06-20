@@ -38,31 +38,29 @@ app.post('/login', async (req, res) => {
 
     // document.write("Hi Isobel");
 
-    // try {
-    //     const [rows] = await db.query(
-    //         'SELECT * FROM Users WHERE username = ?',
-    //         [username]
-    //     );
+    try {
+        const [rows] = await db.query(
+            'SELECT * FROM Users WHERE username = ?',
+            [username]
+        );
 
-    //     if (rows.length === 0){
-    //         return res.status(401).json({error: "Invalid username or password :("});
-    //     }
+        if (rows.length === 0){
+            return res.status(401).json({error: "Invalid username or password :("});
+        }
 
-    //     const user = rows[0];
-    //     if (password !== user.password_hash){
-    //         return res.status(401).json({ error: 'Invalid username or password :('})
-    //     }
+        const user = rows[0];
+        if (password !== user.password_hash){
+            return res.status(401).json({ error: 'Invalid username or password :('})
+        }
 
-    //     req.session.userId = user.user_id;
-    //     req.session.role = user.role;
+        req.session.userId = user.user_id;
+        req.session.role = user.role;
 
-        // res.json({message: 'Login successful :)', role: user.role });
-    // } catch (error) {
-    //         // console.error('Login error:', error);
-    //         res.status(500).json({ error: 'Internal server error'});
-    //     }
-
-    res.json({ message: 'Login' })
+        res.json({message: 'Login successful :)', role: user.role });
+    } catch (error) {
+            // console.error('Login error:', error);
+            res.status(500).json({ error: 'Internal server error'});
+        }
     });
 
 app.post('/logout', (req, res) => {
