@@ -14,7 +14,7 @@ async function initDB(){
             host: 'localhost',
             user: 'root',
             password: '',
-            database: 'dogwalks'
+            database: 'DogWalkService'
         });
 
     console.log('connected to mysql');
