@@ -43,6 +43,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
         JOIN Users ON Dogs.owner_id = Users.id
         WHERE WalkRequests.status = 'open'
         `);
+        
 
 
 
