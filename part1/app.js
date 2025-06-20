@@ -20,31 +20,6 @@ async function initDB(){
     console.log('connected to mysql');
     }}
 
-// sample code
-
-INSERT IGNORE INTO Users (username, email, password_hash, role)
-VALUES
-    ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-    ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-    ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-    ('isobel124', 'isobel@example.com', 'hashed111', 'owner'),
-    ('luffywalker,', 'luffy@example.com', 'hashed222', 'walker');
-
-INSERT IGNORE INTO Dogs (name, size, owner_id)
-VALUES
-    ('Max','medium', (SELECT id FROM Users WHERE username = 'alice123')),
-    ('Bella', 'small',(SELECT id FROM Users WHERE username = 'carol123'));
-
-INSERT IGNORE INTO WalkRequests (dog_id, date_time, duration_minutes, location, status)
-VALUES
-((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands','open'),
-((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-
-INSERT IGNORE INTO WalkApplications (walker_id, walk_request_id)
-VALUES
-    ((SELECT id FROM
-
-
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
     try {
