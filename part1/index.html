@@ -24,7 +24,7 @@
         },
     methods: {
         fetchNewDog(){
-        fetch('https://images.dog.ceo/breeds/terrier-norwich/n02094258_4740.jpg')
+        fetch('https://dog.ceo/api/breeds/image/random')
     .then( res => res.json())
     .then(data => {
         this.dogImage = datamessage;
