@@ -14,7 +14,8 @@ async function initDB(){
             host: 'localhost',
             user: 'root',
             password: '',
-            
+            database: 'dogwalks'
+        });
 
 
 
