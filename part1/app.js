@@ -13,6 +13,7 @@ let db;
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
     try {
+        const[rows] = await db.query 
 
 
 
