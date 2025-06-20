@@ -18,7 +18,7 @@ async function initDB(){
         });
 
     console.log('connected to mysql');
-    }
+    }}
 
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
@@ -80,6 +80,6 @@ app.get('/api/walkers/summary', async (req, res) => {
 
 initDB().then(() => {
     app.listen(PORT, () =>{
-        console.log('sever is running at localhost:${PORT} :)');
+        console.log(`sever is running at localhost:${PORT} :)');
     });
 });
