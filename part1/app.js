@@ -18,12 +18,7 @@ async function initDB(){
         });
 
     console.log('connected to mysql');
-
-
-
-
-
-
+    }
 
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
