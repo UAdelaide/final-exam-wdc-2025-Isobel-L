@@ -43,8 +43,6 @@
             methods: {
                 async login() {
                     try {
-                        this.error = 'num zero';
-
                         const res = await fetch('/login', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
@@ -54,10 +52,7 @@
                             })
                         });
 
-                        this.error = 'num one';
-
                         const data = await res.json();
-                        this.error = 'num two';
 
                         if (res, ok) {
                             if (data.role === 'owner') {
