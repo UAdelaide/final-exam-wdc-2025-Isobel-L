@@ -34,7 +34,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
             SELECT
             WalkRequests.id AS request_id,
             Dogs.name AS dog_name,
-            
+            WalkRequest
 
 
 
