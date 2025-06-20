@@ -28,7 +28,7 @@ app.get('/api/dogs', async (req, res) => {
         });
 
 // route: /api/walkrequests/open
-app.get
+app.get('/api/walkrequests/open', as)
 
 
 
