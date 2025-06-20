@@ -34,7 +34,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
-    const { username, password } = this.req.body;
+    const { username, password } = req.body;
 
     try {
         const [rows] = await db.query(
