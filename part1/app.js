@@ -79,5 +79,5 @@ app.get('/api/walkers/summary', async (req, res) => {
         }});
 
 initDB().then(() => {
-    app.listen(PORT, () =>)
-}
+    app.listen(PORT, () =>{
+        console.log(sev)
