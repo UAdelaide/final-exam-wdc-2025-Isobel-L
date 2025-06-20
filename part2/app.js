@@ -37,7 +37,9 @@ app.post('/login', async (this.request, res) => {
     const { username, password } = this.request.body;
 
     try {
-        const [rows] = await db.query
+        const [rows] = await db.query(
+            'SELECT *'
+        )
     }
 })
 
