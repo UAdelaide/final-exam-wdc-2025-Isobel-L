@@ -13,7 +13,10 @@ let db;
 // route: /api/dogs
 app.get('/api/dogs', async (req, res) => {
     try {
-        const[rows] = await db.query()('')
+        const[rows] = await db.query()(`
+            SELECT
+            Dogs.name AS dog_name,
+            
 
 
 
