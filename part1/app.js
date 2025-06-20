@@ -6,7 +6,7 @@ const PORT = 8080;
 
 let db;
 
-//mysql shit
+//mysql 
 
 async function initDB(){
     try {
