@@ -21,7 +21,7 @@ app.get('/api/dogs', async (req, res) => {
             FROM Dogs
             Join Users ON Dogs.owner_id = Users.id;
         );
-        res
+        res.json(rows); 
 
 
 
