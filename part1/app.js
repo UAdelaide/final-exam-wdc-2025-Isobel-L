@@ -29,7 +29,7 @@ INSERT IGNORE INTO Users (username, email, password_hash, role)
     ('isobel124', 'isobel@example.com', 'hashed111', 'owner'),
     ('luffywalker,', 'luffy@example.com', 'hashed222', 'walker');
 
-INSERT IGNORE INTO Dogs (name, ResizeObserverSize, owner_id) VALUES
+INSERT IGNORE INTO Dogs (name, size, owner_id) VALUES
 
 
 
