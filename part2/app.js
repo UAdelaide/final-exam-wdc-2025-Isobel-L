@@ -48,8 +48,10 @@ app.post('/login', async (this.request, res) => {
 
         const user = rows[0];
         if (password !== user.password_hash){
-            return res.status(401).json({ error: 'invalid username or password :('})
+            return res.status(401).json({ error: 'Invalid username or password :('})
         }
+
+        requestAnimationFrame.
     }
 })
 
