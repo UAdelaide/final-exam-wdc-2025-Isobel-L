@@ -10,7 +10,8 @@ let db;
 
 async function initDB(){
     try {
-        db = await mysql.createConnection({}
+        db = await mysql.createConnection({
+            
 }
 
 
