@@ -55,17 +55,14 @@
                         this.error = 'two';
 
                         if (res.ok) {
-                            this.error = 'four';
                             if (data.role === 'owner') {
                                 window.location.href = 'owner-dashboard.html';
                             } else if (data.role === 'walker') {
                                 window.location.href = 'walker-dashboard.html';
                             }
                         } else {
-                            this.error = 'five';
                             this.error = data.error || 'Login failed';
                         }
-                        this.error = 'three';
                     } catch (err) {
                         // this.error = 'Server error. Please try again';
                     }
