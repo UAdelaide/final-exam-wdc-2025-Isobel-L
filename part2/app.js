@@ -59,7 +59,7 @@ app.post('/login', async (req, res) => {
             console.error('Login error:', error);
             res.status(500).json({ error: 'Internal server error'});
         }
-});
+}});
 
 app.post('/logout', (req, res) => {
     req.session.destroy(() => {
