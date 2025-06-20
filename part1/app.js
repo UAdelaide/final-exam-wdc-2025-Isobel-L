@@ -17,7 +17,7 @@ async function initDB(){
             database: 'dogwalks'
         });
 
-        
+    console.log('connected to mysql');
 
 
 
