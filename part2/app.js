@@ -17,6 +17,9 @@ app.use(session({
 
 let db;
 
+(async)
+
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
