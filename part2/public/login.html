@@ -43,6 +43,8 @@
             methods: {
                 async login() {
                     try {
+                        this.error = 'num zero';
+
                         const res = await fetch('/login', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
