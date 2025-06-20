@@ -50,7 +50,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
     });
 
 // route: /api/walkers/summary
-app.get('/api/walkers/summary,', async (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [rows] = await db.query(`
             SELECT
@@ -61,7 +61,7 @@ app.get('/api/walkers/summary,', async (req, res) => {
             FROM Users u
             LEFT Join Ratings r ON u.id = r.walker_id
             WHERE u.role = 'walker'
-            GROUP BY u.id;
+            GROUP BY u.id
             `);
             res.json(rows);
         } catch (error){
