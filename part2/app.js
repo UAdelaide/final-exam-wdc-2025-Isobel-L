@@ -20,7 +20,9 @@ let db;
 (async () => {
     db = await mysql.createConnection({
         host: 'localhost',
-        
+        user: 'root',
+        password: '',
+        database: ''
     })
 }
 
