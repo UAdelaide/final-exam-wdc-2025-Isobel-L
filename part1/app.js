@@ -20,8 +20,10 @@ async function initDB(){
     console.log('connected to mysql');
     }}
 
+// sample code
 
- 
+
+
 
 
 
