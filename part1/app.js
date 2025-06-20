@@ -49,5 +49,5 @@ app.get('/api/walkrequests/open', async (req, res) => {
     }
     });
 
-// route: /api/walkrequests
+// route: /api/walkers/summary 
 
