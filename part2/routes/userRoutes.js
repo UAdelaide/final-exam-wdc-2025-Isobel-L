@@ -60,7 +60,7 @@ router.get('/dogs', async (req, res) => {
   const ownerId = req.session.userId;
 
   if (!ownerId) {
-    resturn res.status(401)
+    resturn res.status(401).json({ error: })
   }
 })
 
