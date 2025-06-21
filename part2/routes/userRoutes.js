@@ -79,11 +79,11 @@ router.get('/dogs', async (req, res) => {
 
 router.get('/alldogs', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [ownerId]);
+    const [rows] = await db.query('SELECT dog_id, name FROM Dogs');
 
     res.json(rows);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch dogs OK?' });
+    res.status(500).json({ error: 'Failed to fetch all dogs OK?' });
   }
 });
 
