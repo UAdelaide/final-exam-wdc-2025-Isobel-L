@@ -84,6 +84,8 @@
                 <tr v-for="dog in dogs" :key="dog.dog_id">
                     <td> {{ dog.name }}</td>
                     <td> {{ dog.breed || 'Unknown' }}</td>
+                    <td> {{ dog.size }}</td>
+                    <td> </td>
                 </tr>
             </tbody>
         </table>
