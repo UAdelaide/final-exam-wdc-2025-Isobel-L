@@ -96,6 +96,9 @@
                     try {
                         const res = await fetch('/api/users/alldogs');
                         const dogList = await res.json();
+
+                        if (!res.ok) {
+                            console.log()
                         console.log('Still OK');
 
                         // for (const dog of dogList) {
