@@ -107,7 +107,9 @@
               const res = await fetch('/api/dogs', {
                 credentials: 'include'
               });
-              if ()
+              if (!res.ok) {
+                t
+              }
               dogs.value = await res.json();
             } catch (err) {
               error.value = 'Could not load dogs :(';
