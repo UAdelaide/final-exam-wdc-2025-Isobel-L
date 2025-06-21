@@ -62,10 +62,9 @@ app.post('/login', async (req, res) => {
     });
 
 app.post('/logout', (req, res) => {
-    req.session.destroy(() => {
-        res.json({ message: 'logged out'});
-    });
-});
+    req.session.destroy(err => {
+        if (err)
+    }
 
 // Export the app instead of listening here
 module.exports = app;
