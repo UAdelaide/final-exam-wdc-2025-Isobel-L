@@ -51,7 +51,9 @@
 
           async function getUser() {
             try {
-              const res = await fetch('/api/users')
+              const res = await fetch('/api/users/me', {
+                credentials
+              })
             }
           }
 
