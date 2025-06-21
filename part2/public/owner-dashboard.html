@@ -108,7 +108,7 @@
                 credentials: 'include'
               });
               if (!res.ok) {
-                t
+                throw new Error('Bother! ')
               }
               dogs.value = await res.json();
             } catch (err) {
