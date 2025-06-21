@@ -71,16 +71,16 @@ router.get('/dogs', async (req, res) => {
     { dog_id: 12, name: 'Jerry'}
   ]);
 
-  try {
-    const [rows] = await db.query(`
-      // SELECT dog_id, name FROM Dogs WHERE owner_id = ?
-      // `, [ownerId]);
-      SELECT dog_id, name FROM Dogs';
+  // try {
+  //   const [rows] = await db.query(`
+  //     // SELECT dog_id, name FROM Dogs WHERE owner_id = ?
+  //     // `, [ownerId]);
+  //     SELECT dog_id, name FROM Dogs';
 
-    res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch dogs OK?' });
-  }
+  //   res.json(rows);
+  // } catch (error) {
+  //   res.status(500).json({ error: 'Failed to fetch dogs OK?' });
+  // }
 });
 
 module.exports = router;
