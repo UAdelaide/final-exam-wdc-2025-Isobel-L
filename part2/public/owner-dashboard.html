@@ -107,12 +107,10 @@
               const res = await fetch('/dogs', {
                 credentials: 'include'
               });
-              error.value = 'one';
               if (!res.ok) {
-                error.value = await res.text();
+                // error.value = await res.text();
               }
               else {
-                error.value = 'good';
               }
               dogs.value = await res.json();
             } catch (err) {
