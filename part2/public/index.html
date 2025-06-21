@@ -91,13 +91,11 @@
                     }
                 },
 
-                const dogList = ref([]);
-
                 async loadDogs(){
                     console.log('I called loadDogs');
                     try {
                         const res = await fetch('/api/users/alldogs');
-                        dogList.value = await res.json();
+                        this.dogList.value = await res.json();
 
                         if (!res.ok) {
                             console.log('Not OK');
