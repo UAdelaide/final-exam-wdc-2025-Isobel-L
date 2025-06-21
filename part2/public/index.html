@@ -90,20 +90,20 @@
                 },
 
                 async loadDogs(){
-                    try {
-                        const res = await fetch('/api/users/alldogs');
-                        const dogList = await res.json();
+                    // try {
+                    //     const res = await fetch('/api/users/alldogs');
+                    //     const dogList = await res.json();
 
-                        for (const dog of dogList) {
-                            const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
-                            const imgData = await imgRes.json();
-                            dog.image =imgData.message;
-                        }
+                    //     for (const dog of dogList) {
+                    //         const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                    //         const imgData = await imgRes.json();
+                    //         dog.image =imgData.message;
+                    //     }
 
-                        this.dogs = dogList;
-                    } catch (err) {
-                        console.error('Failed to load :(', err);
-                    }
+                    //     this.dogs = dogList;
+                    // } catch (err) {
+                    //     console.error('Failed to load :(', err);
+                    // }
                 }
             },
             mounted(){
