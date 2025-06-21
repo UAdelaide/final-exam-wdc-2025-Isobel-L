@@ -93,7 +93,11 @@
             }
           }
 
-          async function logout(){}
+          async function logout(){
+            try {
+              await fetch('/logout', )
+            }
+          }
 
           onMounted(() => {
             loadWalkRequests();
