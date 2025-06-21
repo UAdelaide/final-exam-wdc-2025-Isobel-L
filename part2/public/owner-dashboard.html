@@ -109,7 +109,7 @@
               });
               error.value = 'one';
               if (!res.ok) {
-                error.value = await res.te;
+                error.value = await res.text();
               }
               else {
                 error.value = 'good';
