@@ -119,7 +119,9 @@
 
         async function logout(){
           try {
-            await fetch('/logout', {method: 'POST'})
+            await fetch('/logout', {method: 'POST'});
+            window.location.href = '/index.html';
+            
           }
         }
 
