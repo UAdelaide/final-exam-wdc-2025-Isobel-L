@@ -101,11 +101,12 @@
               });
               window.location.href = '/index.html';
             } catch (err) {
-              error
+              error.value = 'Failed to logout :(';
             }
           }
 
           onMounted(() => {
+            getUser
             loadWalkRequests();
           });
 
