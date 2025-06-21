@@ -104,9 +104,10 @@
                             console.log('Still OK');
                         }
 
+                        dogList = await res.json();
+
                         console.log('Doggies:', dogList);
 
-                        this.dogList = await res.json();
 
 
                         // for (const dog of dogList) {
