@@ -110,15 +110,6 @@
             loadWalkRequests();
           });
 
-          async function logout() {
-            try {
-              await fetch('/logout', { method: 'POST' });
-              window.location.href = '/index.html';
-            } catch (err) {
-              error.value = 'Failed to logout :(';
-            }
-          }
-
           return {
             walks,
             message,
