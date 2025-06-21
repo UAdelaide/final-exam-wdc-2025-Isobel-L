@@ -99,7 +99,8 @@
                             const imgData = await imgRes.json();
                             dog.image =imgData.message;
                         }
-                        
+
+                        this.dogs = dogList;
                     }
                 }
             }
