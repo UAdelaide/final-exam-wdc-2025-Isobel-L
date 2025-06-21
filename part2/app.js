@@ -28,6 +28,10 @@ let db;
 
 // Routes
 
+(async () => {
+    host: 'localhost',
+    
+})
 
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
