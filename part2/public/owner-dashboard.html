@@ -107,12 +107,13 @@
               const res = await fetch('/api/dogs', {
                 credentials: 'include'
               });
+              error.value =
               if (!res.ok) {
-                error.value ='Bother! ${res.status}');
+                error.value = 'Bother! ${res.status}';
               }
               dogs.value = await res.json();
             } catch (err) {
-              error.value = 'Could not load dogs :(';
+              // error.value = 'Could not load dogs :(';
             }
           }
 
