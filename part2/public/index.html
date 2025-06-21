@@ -96,7 +96,6 @@
                     console.log('I called loadDogs');
                     try {
                         const res = await fetch('/api/users/alldogs');
-                        this.dogList = await res.json();
 
                         if (!res.ok) {
                             console.log('Not OK');
@@ -106,6 +105,8 @@
                         }
 
                         console.log('Doggies:', dogList);
+                        this.dogList = await res.json();
+
 
                         // for (const dog of dogList) {
                         //     const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
