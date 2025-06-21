@@ -57,13 +57,15 @@
               if (!res.ok) throw new Error('Failed to fetch user');
               user.value = await res.json();
             } catch (err) {
-              error
+              error.value = err.message;
             }
           }
 
           async function loadWalkRequests() {
             try {
-              const res = await fetch('/api/walks');
+              const res = await fetch('/api/walks', {
+                
+              });
               if (!res.ok) throw new Error('Failed to load walk requests');
               walks.value = await res.json();
             } catch (err) {
