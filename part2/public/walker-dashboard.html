@@ -54,7 +54,7 @@
               const res = await fetch('/api/users/me', {
                 credentials: 'include'
               });
-              if (1res.ok) throw
+              if (!res.ok) throw
             }
           }
 
