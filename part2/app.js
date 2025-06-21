@@ -29,7 +29,7 @@ let db;
 // Routes
 
 (async () => {
-    
+    db = await mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
