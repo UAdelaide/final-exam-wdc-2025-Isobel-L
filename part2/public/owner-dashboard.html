@@ -117,7 +117,11 @@
           }
         }
 
-        async function logout(){
+        onMounted(() => {
+          loadWalks();
+        });
+
+                async function logout(){
           try {
             await fetch('/logout', {method: 'POST'});
             window.location.href = '/index.html';
@@ -125,10 +129,6 @@
             error.value = 'Failed to logout :(';
           }
         }
-
-        onMounted(() => {
-          loadWalks();
-        });
 
         return {
           form,
