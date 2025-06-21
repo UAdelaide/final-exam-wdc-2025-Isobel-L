@@ -30,7 +30,9 @@ let db;
 
 (async () => {
     host: 'localhost',
-    
+    user: 'root',
+    password: '',
+    database
 })
 
 const walkRoutes = require('./routes/walkRoutes');
