@@ -92,7 +92,7 @@
                 },
 
                 async loadDogs(){
-                    console
+                    console.log("I called loadDog'")
                     try {
                         const res = await fetch('/api/users/alldogs');
                         const dogList = await res.json();
