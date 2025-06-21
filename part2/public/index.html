@@ -108,16 +108,6 @@
                     // } catch (err) {
                     //     console.error('Failed to load :(', err);
                     // }
-
-                    router.get('/dogs', async (req, res) => {
-                        try {
-                            const [rows] = await db.query(`SELECT name, size, owner_id FROM Dogs`);
-                            res.json(rows);
-                        } catch (error) {
-                            console.error('Error loading all dogs:', error);
-                            res.status(500).json({ error: 'Failed to fetch dogs' });
-                        }
-                    });
                 }
             },
             mounted(){
