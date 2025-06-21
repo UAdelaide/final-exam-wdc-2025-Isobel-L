@@ -36,16 +36,16 @@
                     <th>Dog ID</th>
                     <th>Name</th>
                     <th>Owner ID</th>
-                    <th>Size</th>
                     <th>Photo</th>
+                    <th>Size</th>
                 </tr>
             </thread>
             <tbody>
                 <tr v-for="dog in dogs" :key="dog.dog_id">
                     <td> {{ dog.id }}</td>
                     <td> {{ dog.name }}</td>
-                    <td> {{ user.id }}</td>
                     <td> {{ dog.size }}</td>
+                    <td> {{ user.id }}</td>
                     <td><img : src="dog image" width="100" /></td>
                 </tr>
             </tbody>
