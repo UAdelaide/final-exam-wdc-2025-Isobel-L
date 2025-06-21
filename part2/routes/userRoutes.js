@@ -65,7 +65,8 @@ router.get('/dogs', async (req, res) => {
 
   try {
     const [rows] = await db.query(`
-      SELECT`)
+      SELECT dog_id, name, breed FROM Dogs WHERE owner_id = ?
+      `)
   }
 })
 
