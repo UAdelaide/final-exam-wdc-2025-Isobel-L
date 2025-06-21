@@ -52,8 +52,9 @@
           async function getUser() {
             try {
               const res = await fetch('/api/users/me', {
-                credentials
-              })
+                credentials: 'include'
+              });
+              if (1res.ok) throw
             }
           }
 
