@@ -68,16 +68,16 @@ router.get('/dogs', async (req, res) => {
     return res.status(401).json({ error: 'Not logged in' });
   }
 
-  try {
-    const [rows] = await db.query(`
-      // SELECT dog_id, name FROM Dogs WHERE owner_id = ?
-      // `, [ownerId]);
-      SELECT dog_id, name FROM Dogs';
+  // try {
+  //   const [rows] = await db.query(`
+  //     // SELECT dog_id, name FROM Dogs WHERE owner_id = ?
+  //     // `, [ownerId]);
+  //     SELECT dog_id, name FROM Dogs';
 
-    res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch dogs OK?' });
-  }
+  //   res.json(rows);
+  // } catch (error) {
+  //   res.status(500).json({ error: 'Failed to fetch dogs OK?' });
+  // }
 });
 
 module.exports = router;
