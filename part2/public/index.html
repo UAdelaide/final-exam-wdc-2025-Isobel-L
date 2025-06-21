@@ -30,7 +30,7 @@
 
         <div id="app" class="container mt-4">
         <h1 class="mb-3"> All Dogs</h1>
-        <table class = "table tabLe-bordered">
+        <table class = "table table-bordered">
             <thread>
                 <tr>
                     <th>Name</th>
@@ -89,25 +89,19 @@
 
                 async loadDogs(){
                     try {
+                        const res = await fetch('/api/users/alldogs');
+                        const dogList = await res.json();
 
-                    } catch(err) {
+                        for (const dog of dogList) {
+                            const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                            const imgData = await imgRes.json();
+                            dog.image =imgData.message;
+                        }
 
+                        this.dogs = dogList;
+                    } catch (err) {
+                        console.error('Failed to load :(', err);
                     }
-
-                    // try {
-                    //     const res = await fetch('/api/users/alldogs');
-                    //     const dogList = await res.json();
-
-                    //     for (const dog of dogList) {
-                    //         const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
-                    //         const imgData = await imgRes.json();
-                    //         dog.image =imgData.message;
-                    //     }
-
-                    //     this.dogs = dogList;
-                    // } catch (err) {
-                    //     console.error('Failed to load :(', err);
-                    // }
                 }
             },
             mounted(){
