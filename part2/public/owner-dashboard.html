@@ -104,10 +104,13 @@
 
           async function loadDogs() {
             try {
+              error.value = 'one';
               const res = await fetch('/api/dogs', {
                 credentials: 'include'
               });
+              error.value = 'two';
               dogs.value = await res.json();
+              error.value = 'three';
             } catch (err) {
               error.value = 'Could not load dogs :(';
             }
