@@ -63,7 +63,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/dogs', async (req, res) => {
   res.json(
-    
+    { dog_id: }
   )
   // const ownerId = req.session.userId;
 
