@@ -98,8 +98,11 @@
                         const dogList = await res.json();
 
                         if (!res.ok) {
-                            console.log()
-                        console.log('Still OK');
+                            console.log('Not OK');
+                        }
+                        else {
+                            console.log('Still OK');
+                        }
 
                         // for (const dog of dogList) {
                         //     const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
