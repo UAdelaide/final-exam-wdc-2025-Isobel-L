@@ -57,7 +57,9 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
-  const
+  const ownerId = req.session.userId;
+
+  if owner
 })
 
 module.exports = router;
