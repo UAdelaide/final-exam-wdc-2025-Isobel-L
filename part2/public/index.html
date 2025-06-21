@@ -98,11 +98,9 @@
                     try {
                         const res = await fetch('/api/users/alldogs');
 
+                        
                         if (!res.ok) {
-                            console.log('Not OK');
-                        }
-                        else {
-                            console.log('Still OK');
+                            return;
                         }
 
                         dogList = await res.json();
