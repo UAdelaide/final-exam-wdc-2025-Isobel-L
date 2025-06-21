@@ -109,7 +109,7 @@
               });
               error.value = 'one';
               if (!res.ok) {
-                error.value = 'Bother! ${res.status}';
+                error.value = await res.te;
               }
               else {
                 error.value = 'good';
