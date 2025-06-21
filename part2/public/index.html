@@ -102,10 +102,11 @@
 
                         this.dogs = dogList;
                     } catch (err) {
-                        console.error('Failed to load :(')
+                        console.error('Failed to load :(', err);
                     }
                 }
-            }
+            },
+            mounted
         }).mount('#app');
     </script>
 
