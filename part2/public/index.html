@@ -95,7 +95,7 @@
                     console.log('I called loadDogs');
                     try {
                         const res = await fetch('/api/users/alldogs');
-                        this.dogList.value = await res.json();
+                        this.dogList = await res.json();
 
                         if (!res.ok) {
                             console.log('Not OK');
