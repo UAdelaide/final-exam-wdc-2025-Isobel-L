@@ -29,11 +29,12 @@ let db;
 // Routes
 
 (async () => {
+    
     host: 'localhost',
     user: 'root',
     password: '',
-    database
-})
+    database: 'DogWalkService'
+});
 
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
