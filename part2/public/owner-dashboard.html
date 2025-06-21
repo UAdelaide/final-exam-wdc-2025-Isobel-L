@@ -111,7 +111,9 @@
               if (!res.ok) {
                 error.value = 'Bother! ${res.status}';
               }
-              else 
+              else {
+                error.value = 'good';
+              }
               dogs.value = await res.json();
             } catch (err) {
               // error.value = 'Could not load dogs :(';
