@@ -98,7 +98,7 @@
                     try {
                         const res = await fetch('/api/users/alldogs');
 
-                        
+                        console.log('res.ok is ', res.ok)
                         if (!res.ok) {
                             return;
                         }
