@@ -29,7 +29,7 @@
                 <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">
                   {{ dog.name }} ({{ dog.breed }})
                 </option>
-                </select>
+              </select>
             </div>
 
             <div class="mb-3">
@@ -100,6 +100,15 @@
             }
           }
 
+          async function loadDogs() {
+            try {
+              const res = await fetch('/api/users/dog');
+              dogs.value = await res.json();
+            } catch (err) {
+              error.value = 'Could not load dogs :(';
+            }
+          }
+
           async function submitWalkRequest() {
             try {
               const res = await fetch('/api/walks', {
@@ -139,17 +148,6 @@
               error.value = 'Failed to logout :(';
             }
           }
-
-        const dogs = ref([]);
-
-        async function loadDogs(){
-          try{
-            const res = await fetch('/api/users/dog');
-            dogs.value = await res.json();
-          } catch (err) {
-            error.value = 'Could not load dogs :(';
-          }
-        }
 
           return {
             form,
